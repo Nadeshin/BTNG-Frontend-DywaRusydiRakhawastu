@@ -3340,3 +3340,14 @@ body.has-drawer {
     white-space: nowrap;
   }
 }
+
+/* Pemberitahuan bila JavaScript dimatikan */
+.noscript {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-ink);
+  color: var(--color-surface);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+}

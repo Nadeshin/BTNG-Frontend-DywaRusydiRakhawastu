@@ -8,10 +8,7 @@ const rupiah = new Intl.NumberFormat('id-ID', {
   maximumFractionDigits: 0,
 });
 
-const plainNumber = new Intl.NumberFormat('id-ID');
-
 export const formatRupiah = (value) => rupiah.format(Number(value) || 0);
-export const formatNumber = (value) => plainNumber.format(Number(value) || 0);
 
 /** Batasi frekuensi pemanggilan (dipakai untuk input pencarian). */
 export function debounce(fn, delay = 250) {
@@ -128,8 +125,4 @@ export function showToast(message) {
   toast.classList.add('is-visible');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2600);
-}
-
-export function prefersReducedMotion() {
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
