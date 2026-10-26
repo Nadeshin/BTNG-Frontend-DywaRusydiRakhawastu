@@ -237,6 +237,21 @@ function updateCredit() {
   setText('credit-price', formatRupiah(credit.price));
   setText('credit-dp-amount', formatRupiah(dpAmount));
   setText('credit-principal', formatRupiah(principal));
+
+  updateRangeFill();
+}
+
+/** Mengisi variabel CSS --range-progress agar track slider terlihat terisi. */
+function updateRangeFill() {
+  const dpInput = document.getElementById('credit-dp');
+  if (!dpInput) return;
+
+  const min = Number(dpInput.min) || 0;
+  const max = Number(dpInput.max) || 100;
+  const value = Number(dpInput.value) || min;
+  const progress = max > min ? ((value - min) / (max - min)) * 100 : 0;
+
+  dpInput.style.setProperty('--range-progress', `${progress}%`);
 }
 
 /* -------------------------------------------------------------------------- */

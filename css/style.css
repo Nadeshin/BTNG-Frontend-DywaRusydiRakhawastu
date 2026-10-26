@@ -1192,10 +1192,84 @@ small {
   gap: var(--space-1);
 }
 
+/* Slider DP: track digambar manual supaya tetap terlihat di kartu biru tua.
+   --range-progress diisi oleh detail.js sesuai posisi nilai saat ini. */
 .credit-card__range {
+  --range-progress: 17%;
   width: 100%;
-  accent-color: var(--color-soft);
+  height: 24px;
   margin-top: var(--space-3);
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.credit-card__range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background:
+    linear-gradient(
+      to right,
+      var(--color-soft) 0%,
+      var(--color-soft) var(--range-progress),
+      rgba(255, 255, 255, 0.28) var(--range-progress),
+      rgba(255, 255, 255, 0.28) 100%
+    );
+}
+
+.credit-card__range::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  /* (tinggi track 6px - tinggi thumb 20px) / 2 */
+  margin-top: -7px;
+  border: 3px solid var(--color-soft);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  box-shadow: 0 2px 8px rgba(4, 24, 56, 0.45);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.credit-card__range:hover::-webkit-slider-thumb {
+  transform: scale(1.06);
+}
+
+.credit-card__range:focus-visible {
+  outline: none;
+}
+
+.credit-card__range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(227, 242, 253, 0.45), 0 2px 8px rgba(4, 24, 56, 0.45);
+}
+
+/* Firefox */
+.credit-card__range::-moz-range-track {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.28);
+}
+
+.credit-card__range::-moz-range-progress {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-soft);
+}
+
+.credit-card__range::-moz-range-thumb {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--color-soft);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  box-shadow: 0 2px 8px rgba(4, 24, 56, 0.45);
+}
+
+.credit-card__range:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px rgba(227, 242, 253, 0.45), 0 2px 8px rgba(4, 24, 56, 0.45);
 }
 
 .credit-card__divider {
