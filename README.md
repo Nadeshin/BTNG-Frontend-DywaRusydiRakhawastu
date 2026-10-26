@@ -2,6 +2,8 @@
 
 Website showroom mobil untuk **Tugas Akhir BTNG Kelas Frontend**. Dibangun dengan HTML5, CSS3, dan JavaScript native (vanilla), tanpa framework atau build tool apa pun.
 
+**Demo langsung:** <https://nadeshin.github.io/BTNG-Frontend-DywaRusydiRakhawastu/>
+
 Data mobil diambil langsung dari endpoint resmi panitia:
 
 ```
