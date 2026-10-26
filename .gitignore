@@ -1,0 +1,7 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependensi (proyek ini tidak memakai build tool)
+node_modules/

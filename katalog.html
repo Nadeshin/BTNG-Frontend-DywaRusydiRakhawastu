@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jelajahi koleksi mobil Rakhawastu Motors. Filter berdasarkan merek, bahan bakar, transmisi, dan harga, lalu lihat detail unit." />
+  <meta name="theme-color" content="#0D47A1" />
+  <title>Katalog Mobil — Rakhawastu Motors</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page--katalog">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Rakhawastu Motors — Beranda">
+        <span class="site-header__logo-mark" aria-hidden="true">RM</span>
+        <span class="site-header__logo-text">
+          <span class="site-header__logo-name">Rakhawastu Motors</span>
+          <span class="site-header__logo-tagline">Showroom Terpercaya</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a href="index.html" class="site-nav__link">Beranda</a>
+        <a href="katalog.html" class="site-nav__link site-nav__link--active" aria-current="page">Katalog</a>
+        <a href="index.html#keunggulan" class="site-nav__link">Keunggulan</a>
+        <a href="index.html#kontak" class="site-nav__link">Kontak</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <button type="button" class="site-header__fav js-open-favorites" aria-label="Buka daftar mobil favorit" aria-expanded="false" aria-controls="fav-drawer-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+          <span class="site-header__fav-count" data-fav-count hidden>0</span>
+        </button>
+        <a href="index.html#kontak" class="site-header__cta">Hubungi Kami</a>
+        <button type="button" class="site-header__hamburger js-nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="site-header__hamburger-bar"></span>
+          <span class="site-header__hamburger-bar"></span>
+          <span class="site-header__hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav--mobile" id="mobile-nav" aria-label="Navigasi seluler" aria-hidden="true">
+    <a href="index.html" class="site-nav__link">Beranda</a>
+    <a href="katalog.html" class="site-nav__link site-nav__link--active" aria-current="page">Katalog</a>
+    <a href="index.html#keunggulan" class="site-nav__link">Keunggulan</a>
+    <a href="index.html#kontak" class="site-nav__link">Kontak</a>
+    <a href="index.html#kontak" class="site-header__cta">Hubungi Kami</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ==================== CATALOG HERO ==================== -->
+    <section class="catalog-hero">
+      <div class="container">
+        <span class="section__eyebrow">Koleksi lengkap</span>
+        <h1 class="catalog-hero__title">Katalog mobil</h1>
+        <p class="catalog-hero__desc">Semua unit yang tersedia di showroom, lengkap dengan harga dan spesifikasi dari data resmi. Gunakan filter untuk mempersempit pilihan.</p>
+      </div>
+    </section>
+
+    <!-- ==================== FILTER BAR ==================== -->
+    <div class="filter-bar" role="search" aria-label="Cari dan filter mobil">
+      <div class="container filter-bar__inner">
+        <label class="filter-bar__label" for="search">Cari</label>
+        <div class="filter-bar__search-wrap">
+          <svg class="filter-bar__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+          <input
+            class="filter-bar__input"
+            type="search"
+            id="search"
+            name="q"
+            placeholder="Cari merek atau model…"
+            autocomplete="off"
+          />
+        </div>
+
+        <select class="filter-bar__select" id="filter-brand" name="brand" aria-label="Filter merek">
+          <option value="">Semua merek</option>
+        </select>
+
+        <select class="filter-bar__select" id="filter-fuel" name="fuel" aria-label="Filter bahan bakar">
+          <option value="">Semua bahan bakar</option>
+        </select>
+
+        <select class="filter-bar__select" id="filter-transmission" name="transmission" aria-label="Filter transmisi">
+          <option value="">Semua transmisi</option>
+        </select>
+
+        <select class="filter-bar__select" id="filter-status" name="status" aria-label="Filter status unit">
+          <option value="">Semua status</option>
+          <option value="tersedia">Tersedia</option>
+          <option value="sold">Terjual</option>
+        </select>
+
+        <select class="filter-bar__select" id="filter-sort" name="sort" aria-label="Urutkan hasil">
+          <option value="terbaru">Terbaru</option>
+          <option value="harga-asc">Harga terendah</option>
+          <option value="harga-desc">Harga tertinggi</option>
+          <option value="tahun-desc">Tahun terbaru</option>
+          <option value="nama-asc">Nama A–Z</option>
+        </select>
+
+        <div class="filter-bar__actions">
+          <span class="filter-bar__count" id="result-count" role="status" aria-live="polite">Memuat…</span>
+          <button type="button" class="btn btn--secondary btn--sm" id="reset-filters">Reset</button>
+        </div>
+      </div>
+
+      <div class="container filter-chips" id="active-filters" aria-label="Filter aktif"></div>
+    </div>
+
+    <!-- ==================== GRID ==================== -->
+    <section class="section--sm" aria-labelledby="catalog-title">
+      <div class="container">
+        <h2 class="sr-only" id="catalog-title">Daftar mobil</h2>
+        <div class="catalog-cars-grid" id="catalog-grid" aria-live="polite" aria-busy="true"></div>
+        <div id="catalog-state" hidden></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="kontak">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-footer__logo" aria-label="Rakhawastu Motors — Beranda">
+            <span class="site-header__logo-mark" aria-hidden="true">RM</span>
+            <span class="site-footer__logo-name">Rakhawastu Motors</span>
+          </a>
+          <p class="site-footer__tagline">Showroom mobil terpercaya dengan koleksi pilihan dari sembilan merek, dikurasi sejak 2010.</p>
+          <div class="site-footer__social">
+            <a href="https://instagram.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="https://wa.me/6281234567890" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </a>
+            <a href="mailto:halo@rakhawastumotors.id" class="site-footer__social-link" aria-label="Email Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <polyline points="22 6 12 13 2 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Navigasi</h2>
+          <nav class="site-footer__links" aria-label="Navigasi footer">
+            <a href="index.html" class="site-footer__link">Beranda</a>
+            <a href="katalog.html" class="site-footer__link">Katalog mobil</a>
+            <a href="index.html#keunggulan" class="site-footer__link">Keunggulan</a>
+            <button type="button" class="site-footer__link site-footer__link--button js-open-favorites">Mobil favorit</button>
+          </nav>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Layanan</h2>
+          <div class="site-footer__links">
+            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20menjadwalkan%20test%20drive." class="site-footer__link" target="_blank" rel="noopener noreferrer">Jadwal test drive</a>
+            <a href="katalog.html?sort=harga-asc" class="site-footer__link">Mobil di bawah Rp 300 juta</a>
+            <a href="katalog.html?fuel=Listrik" class="site-footer__link">Mobil listrik</a>
+            <a href="index.html#kontak" class="site-footer__link">Hubungi showroom</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Kontak</h2>
+          <div class="site-footer__contact-items">
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Jl. Sudirman No. 88, Jakarta Selatan 12190</span>
+            </p>
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <a class="site-footer__link" href="tel:+622155558888">+62 21 5555 8888</a>
+            </p>
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Senin–Sabtu, 09.00–18.00 WIB</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© <span data-year>2026</span> Rakhawastu Motors. Hak cipta dilindungi.</p>
+        <div class="site-footer__bottom-links">
+          <span class="site-footer__bottom-link">Tugas Akhir BTNG · Kelas Frontend</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="fav-drawer"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/katalog.js"></script>
+</body>
+</html>

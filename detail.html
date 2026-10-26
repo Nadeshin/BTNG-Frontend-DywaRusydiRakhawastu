@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lihat spesifikasi lengkap, simulasi kredit, dan jadwalkan test drive untuk unit pilihan Anda di Rakhawastu Motors." />
+  <meta name="theme-color" content="#0D47A1" />
+  <title>Detail Mobil — Rakhawastu Motors</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page--detail">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Rakhawastu Motors — Beranda">
+        <span class="site-header__logo-mark" aria-hidden="true">RM</span>
+        <span class="site-header__logo-text">
+          <span class="site-header__logo-name">Rakhawastu Motors</span>
+          <span class="site-header__logo-tagline">Showroom Terpercaya</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a href="index.html" class="site-nav__link">Beranda</a>
+        <a href="katalog.html" class="site-nav__link site-nav__link--active" aria-current="page">Katalog</a>
+        <a href="index.html#keunggulan" class="site-nav__link">Keunggulan</a>
+        <a href="index.html#kontak" class="site-nav__link">Kontak</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <button type="button" class="site-header__fav js-open-favorites" aria-label="Buka daftar mobil favorit" aria-expanded="false" aria-controls="fav-drawer-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+          <span class="site-header__fav-count" data-fav-count hidden>0</span>
+        </button>
+        <a href="index.html#kontak" class="site-header__cta">Hubungi Kami</a>
+        <button type="button" class="site-header__hamburger js-nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="site-header__hamburger-bar"></span>
+          <span class="site-header__hamburger-bar"></span>
+          <span class="site-header__hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav--mobile" id="mobile-nav" aria-label="Navigasi seluler" aria-hidden="true">
+    <a href="index.html" class="site-nav__link">Beranda</a>
+    <a href="katalog.html" class="site-nav__link site-nav__link--active" aria-current="page">Katalog</a>
+    <a href="index.html#keunggulan" class="site-nav__link">Keunggulan</a>
+    <a href="index.html#kontak" class="site-nav__link">Kontak</a>
+    <a href="index.html#kontak" class="site-header__cta">Hubungi Kami</a>
+  </nav>
+
+  <main id="main">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <span class="breadcrumb__item"><a class="breadcrumb__link" href="index.html">Beranda</a></span>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span class="breadcrumb__item"><a class="breadcrumb__link" href="katalog.html">Katalog</a></span>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span class="breadcrumb__item breadcrumb__current" id="detail-breadcrumb" aria-current="page">Detail mobil</span>
+      </nav>
+
+      <div id="detail-status" aria-live="polite"></div>
+
+      <article id="detail-content" hidden>
+        <div class="detail-layout">
+
+          <!-- ============ KOLOM UTAMA ============ -->
+          <div class="detail-layout__main">
+            <header class="detail-header">
+              <div class="detail-header__meta">
+                <span class="badge badge--accent" id="detail-badge">Tersedia</span>
+                <span class="chip chip--ink" id="detail-brand">Merek</span>
+                <span class="chip" id="detail-year">Tahun</span>
+              </div>
+              <h1 class="detail-header__title" id="detail-title">Memuat unit…</h1>
+              <p class="detail-header__subtitle" id="detail-subtitle"></p>
+            </header>
+
+            <div class="gallery">
+              <div class="gallery__main">
+                <img id="detail-image" width="1000" height="562" alt="" decoding="async" />
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ============ SIDEBAR ============ -->
+          <aside class="detail-layout__sidebar">
+
+            <div class="purchase-panel">
+              <div>
+                <p class="purchase-panel__price-label">Harga penawaran</p>
+                <p class="purchase-panel__price" id="detail-price">—</p>
+              </div>
+
+              <div class="purchase-panel__divider" aria-hidden="true"></div>
+
+              <ul class="purchase-panel__features">
+                <li class="purchase-panel__feature">
+                  <svg class="purchase-panel__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <polyline points="9 12 11 14 15 10" />
+                  </svg>
+                  <span>Lolos pemeriksaan kondisi</span>
+                </li>
+                <li class="purchase-panel__feature">
+                  <svg class="purchase-panel__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <polyline points="9 15 11 17 15 13" />
+                  </svg>
+                  <span>Dokumen dan pajak jelas</span>
+                </li>
+                <li class="purchase-panel__feature">
+                  <svg class="purchase-panel__feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="1" y="5" width="15" height="12" rx="2" />
+                    <path d="M16 9h3l4 4v4h-7z" />
+                    <circle cx="5.5" cy="18.5" r="1.5" />
+                    <circle cx="18.5" cy="18.5" r="1.5" />
+                  </svg>
+                  <span>Antar unit ke alamat Anda</span>
+                </li>
+              </ul>
+
+              <div class="purchase-panel__actions">
+                <a class="btn btn--primary" id="detail-cta" href="index.html#kontak">Jadwalkan test drive</a>
+                <button type="button" class="btn btn--secondary js-fav-detail" id="detail-fav" aria-pressed="false">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                  <span data-fav-label>Simpan ke favorit</span>
+                </button>
+              </div>
+
+              <p class="purchase-panel__note">Harga dapat berubah tanpa pemberitahuan. Biaya administrasi dan asuransi dihitung terpisah.</p>
+            </div>
+
+            <section class="credit-card" aria-labelledby="credit-title">
+              <p class="credit-card__label" id="credit-title">Estimasi cicilan</p>
+              <p class="credit-card__value" id="credit-monthly">—</p>
+              <p class="credit-card__unit">per bulan · bunga flat 7,5% / tahun</p>
+
+              <div class="credit-card__divider" aria-hidden="true"></div>
+
+              <div class="credit-card__field">
+                <label class="credit-card__label" for="credit-dp">
+                  Uang muka <span class="credit-card__highlight" id="credit-dp-value">30%</span>
+                </label>
+                <input class="credit-card__range" type="range" id="credit-dp" min="20" max="80" step="5" value="30" />
+                <div class="credit-card__scale" aria-hidden="true"><span>20%</span><span>80%</span></div>
+              </div>
+
+              <div class="credit-card__field">
+                <label class="credit-card__label" for="credit-tenor">Tenor</label>
+                <select class="credit-card__select" id="credit-tenor">
+                  <option value="12">12 bulan</option>
+                  <option value="24" selected>24 bulan</option>
+                  <option value="36">36 bulan</option>
+                  <option value="48">48 bulan</option>
+                  <option value="60">60 bulan</option>
+                </select>
+              </div>
+
+              <div class="credit-card__divider" aria-hidden="true"></div>
+
+              <dl class="credit-summary">
+                <div class="credit-summary__row">
+                  <dt>Harga kendaraan</dt>
+                  <dd id="credit-price">—</dd>
+                </div>
+                <div class="credit-summary__row">
+                  <dt>Uang muka</dt>
+                  <dd id="credit-dp-amount">—</dd>
+                </div>
+                <div class="credit-summary__row">
+                  <dt>Pokok pinjaman</dt>
+                  <dd id="credit-principal">—</dd>
+                </div>
+              </dl>
+
+              <p class="credit-card__disclaimer">Simulasi bersifat perkiraan. Suku bunga dan biaya final ditentukan oleh lembaga pembiayaan.</p>
+            </section>
+
+          </aside>
+
+          <!-- ============ DESKRIPSI & SPESIFIKASI ============ -->
+          <div class="detail-layout__details">
+            <section class="detail-section" aria-labelledby="desc-title">
+              <h2 class="detail-section__title" id="desc-title">Tentang unit ini</h2>
+              <div class="detail-desc" id="detail-desc"></div>
+            </section>
+
+            <section class="detail-section" aria-labelledby="spec-title">
+              <h2 class="detail-section__title" id="spec-title">Spesifikasi unit</h2>
+              <div class="spec-grid" id="detail-specs"></div>
+            </section>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- ==================== MOBIL SERUPA ==================== -->
+    <section class="related-cars" id="related-section" aria-labelledby="related-title" hidden>
+      <div class="container">
+        <span class="section__eyebrow">Pilihan lain</span>
+        <h2 class="section__title" id="related-title">Mobil serupa</h2>
+        <div class="related-cars__grid" id="related-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="kontak">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-footer__logo" aria-label="Rakhawastu Motors — Beranda">
+            <span class="site-header__logo-mark" aria-hidden="true">RM</span>
+            <span class="site-footer__logo-name">Rakhawastu Motors</span>
+          </a>
+          <p class="site-footer__tagline">Showroom mobil terpercaya dengan koleksi pilihan dari sembilan merek, dikurasi sejak 2010.</p>
+          <div class="site-footer__social">
+            <a href="https://instagram.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="https://wa.me/6281234567890" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </a>
+            <a href="mailto:halo@rakhawastumotors.id" class="site-footer__social-link" aria-label="Email Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <polyline points="22 6 12 13 2 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Navigasi</h2>
+          <nav class="site-footer__links" aria-label="Navigasi footer">
+            <a href="index.html" class="site-footer__link">Beranda</a>
+            <a href="katalog.html" class="site-footer__link">Katalog mobil</a>
+            <a href="index.html#keunggulan" class="site-footer__link">Keunggulan</a>
+            <button type="button" class="site-footer__link site-footer__link--button js-open-favorites">Mobil favorit</button>
+          </nav>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Layanan</h2>
+          <div class="site-footer__links">
+            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20menjadwalkan%20test%20drive." class="site-footer__link" target="_blank" rel="noopener noreferrer">Jadwal test drive</a>
+            <a href="katalog.html?sort=harga-asc" class="site-footer__link">Mobil di bawah Rp 300 juta</a>
+            <a href="katalog.html?fuel=Listrik" class="site-footer__link">Mobil listrik</a>
+            <a href="index.html#kontak" class="site-footer__link">Hubungi showroom</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Kontak</h2>
+          <div class="site-footer__contact-items">
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Jl. Sudirman No. 88, Jakarta Selatan 12190</span>
+            </p>
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <a class="site-footer__link" href="tel:+622155558888">+62 21 5555 8888</a>
+            </p>
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Senin–Sabtu, 09.00–18.00 WIB</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© <span data-year>2026</span> Rakhawastu Motors. Hak cipta dilindungi.</p>
+        <div class="site-footer__bottom-links">
+          <span class="site-footer__bottom-link">Tugas Akhir BTNG · Kelas Frontend</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="fav-drawer"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/detail.js"></script>
+</body>
+</html>

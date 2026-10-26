@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rakhawastu Motors — showroom mobil terpercaya. Jelajahi koleksi mobil berkualitas dengan harga transparan dan proses pembelian yang mudah." />
+  <meta name="theme-color" content="#0D47A1" />
+  <title>Rakhawastu Motors — Showroom Mobil Terpercaya</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page--home">
+
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Rakhawastu Motors — Beranda">
+        <span class="site-header__logo-mark" aria-hidden="true">RM</span>
+        <span class="site-header__logo-text">
+          <span class="site-header__logo-name">Rakhawastu Motors</span>
+          <span class="site-header__logo-tagline">Showroom Terpercaya</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <a href="index.html" class="site-nav__link site-nav__link--active" aria-current="page">Beranda</a>
+        <a href="katalog.html" class="site-nav__link">Katalog</a>
+        <a href="index.html#keunggulan" class="site-nav__link">Keunggulan</a>
+        <a href="index.html#kontak" class="site-nav__link">Kontak</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <button type="button" class="site-header__fav js-open-favorites" aria-label="Buka daftar mobil favorit" aria-expanded="false" aria-controls="fav-drawer-panel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+          <span class="site-header__fav-count" data-fav-count hidden>0</span>
+        </button>
+        <a href="index.html#kontak" class="site-header__cta">Hubungi Kami</a>
+        <button type="button" class="site-header__hamburger js-nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="site-header__hamburger-bar"></span>
+          <span class="site-header__hamburger-bar"></span>
+          <span class="site-header__hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav--mobile" id="mobile-nav" aria-label="Navigasi seluler" aria-hidden="true">
+    <a href="index.html" class="site-nav__link site-nav__link--active" aria-current="page">Beranda</a>
+    <a href="katalog.html" class="site-nav__link">Katalog</a>
+    <a href="index.html#keunggulan" class="site-nav__link">Keunggulan</a>
+    <a href="index.html#kontak" class="site-nav__link">Kontak</a>
+    <a href="index.html#kontak" class="site-header__cta">Hubungi Kami</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Showroom bersertifikat · Jakarta</span>
+          <h1 class="hero__headline" id="hero-title">Temukan mobil yang tepat untuk <em>setiap perjalanan</em>.</h1>
+          <p class="hero__lead">Koleksi mobil pilihan dari sembilan merek terkemuka, lengkap dengan riwayat inspeksi, dokumen resmi, dan pendampingan kredit hingga unit siap antar.</p>
+
+          <div class="hero__actions">
+            <a href="katalog.html" class="btn btn--primary">Jelajahi Katalog</a>
+            <a href="#keunggulan" class="btn btn--secondary">Kenapa Rakhawastu?</a>
+          </div>
+
+          <div class="hero__stats" aria-label="Ringkasan koleksi">
+            <div class="hero__stat">
+              <span class="hero__stat-value" id="stat-units">—</span>
+              <span class="hero__stat-label">Unit koleksi</span>
+            </div>
+            <span class="hero__stat-divider" aria-hidden="true"></span>
+            <div class="hero__stat">
+              <span class="hero__stat-value" id="stat-brands">—</span>
+              <span class="hero__stat-label">Merek resmi</span>
+            </div>
+            <span class="hero__stat-divider" aria-hidden="true"></span>
+            <div class="hero__stat">
+              <span class="hero__stat-value" id="stat-available">—</span>
+              <span class="hero__stat-label">Siap dipakai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__ring" aria-hidden="true"></div>
+          <div class="hero__image-frame">
+            <img
+              id="hero-image"
+              class="hero__image"
+              width="800"
+              height="600"
+              alt=""
+              fetchpriority="high"
+              decoding="async"
+            />
+          </div>
+          <div class="hero__spec-card" id="hero-spec" aria-live="polite">
+            <span class="hero__spec-card-title">Unit unggulan</span>
+            <div class="hero__spec-card-items">
+              <span class="hero__spec-card-item" id="hero-name">Memuat data mobil…</span>
+              <span class="hero__spec-card-item" id="hero-price"></span>
+              <span class="hero__spec-card-item" id="hero-meta"></span>
+            </div>
+          </div>
+          <div class="hero__ring hero__ring--sm" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== KEUNGGULAN ==================== -->
+    <section class="features section" id="keunggulan" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Kenapa memilih kami</span>
+          <h2 class="section__title" id="features-title">Membeli mobil tanpa kerumitan</h2>
+          <p class="section__subtitle">Empat hal yang membuat proses di Rakhawastu Motors terasa berbeda.</p>
+        </div>
+
+        <div class="features__grid">
+          <article class="feature-item">
+            <div class="feature-item__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <polyline points="9 12 11 14 15 10" />
+              </svg>
+            </div>
+            <div class="feature-item__body">
+              <h3 class="feature-item__title">Riwayat jelas</h3>
+              <p class="feature-item__desc">Setiap unit melewati pemeriksaan menyeluruh dan dilengkapi laporan kondisi apa adanya.</p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <div class="feature-item__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="9" y1="13" x2="15" y2="13" />
+                <line x1="9" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="feature-item__body">
+              <h3 class="feature-item__title">Dokumen resmi</h3>
+              <p class="feature-item__desc">STNK, BPKB, dan berkas pendukung ditangani tim kami sampai tuntas.</p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <div class="feature-item__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+                <line x1="2" y1="10" x2="22" y2="10" />
+                <line x1="6" y1="15" x2="10" y2="15" />
+              </svg>
+            </div>
+            <div class="feature-item__body">
+              <h3 class="feature-item__title">Simulasi kredit</h3>
+              <p class="feature-item__desc">Hitung DP dan cicilan langsung di halaman unit sebelum datang ke showroom.</p>
+            </div>
+          </article>
+
+          <article class="feature-item">
+            <div class="feature-item__icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+              </svg>
+            </div>
+            <div class="feature-item__body">
+              <h3 class="feature-item__title">Layanan purna jual</h3>
+              <p class="feature-item__desc">Butuh servis atau klaim garansi? Satu pesan, tim kami yang mengurus.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MOBIL UNGGULAN ==================== -->
+    <section class="featured section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Pilihan minggu ini</span>
+          <h2 class="section__title" id="featured-title">Mobil unggulan</h2>
+          <p class="section__subtitle">Enam unit terbaru yang paling banyak diminati pembeli.</p>
+          <div class="divider" aria-hidden="true"></div>
+          <a href="katalog.html" class="btn btn--ghost">Lihat semua koleksi →</a>
+        </div>
+
+        <div class="featured__grid" id="featured-grid" aria-live="polite" aria-busy="true"></div>
+        <div id="featured-state" hidden></div>
+      </div>
+    </section>
+
+    <!-- ==================== BRAND STRIP ==================== -->
+    <section class="brand-strip" aria-labelledby="brands-title">
+      <div class="container">
+        <h2 class="sr-only" id="brands-title">Merek yang tersedia di showroom</h2>
+        <div class="brand-strip__inner" id="brand-strip"></div>
+      </div>
+    </section>
+
+    <!-- ==================== PROSES ==================== -->
+    <section class="section" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Alur pembelian</span>
+          <h2 class="section__title" id="process-title">Tiga langkah, mobil siap antar</h2>
+          <p class="section__subtitle">Transparan dari pemilihan unit sampai serah terima kunci.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true">01</span>
+            <div class="timeline__content">
+              <h3 class="timeline__title">Pilih unit dan bandingkan</h3>
+              <p class="timeline__desc">Gunakan pencarian, filter merek, bahan bakar, dan transmisi untuk mempersempit pilihan.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true">02</span>
+            <div class="timeline__content">
+              <h3 class="timeline__title">Konsultasi dan test drive</h3>
+              <p class="timeline__desc">Jadwalkan kunjungan, cek kondisi langsung, dan diskusikan skema kredit bersama tim kami.</p>
+            </div>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__dot" aria-hidden="true">03</span>
+            <div class="timeline__content">
+              <h3 class="timeline__title">Administrasi dan serah terima</h3>
+              <p class="timeline__desc">Dokumen kami urus, unit dipoles, lalu diantar ke alamat Anda tanpa biaya tambahan.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONI ==================== -->
+    <section class="section testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Kata pembeli</span>
+          <h2 class="section__title" id="testimonials-title">Dipercaya sejak 2010</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 dari 5 bintang">★★★★★</div>
+            <p class="testimonial-card__quote">Prosesnya cepat. Mobil datang sesuai foto, dokumen lengkap, dan timnya sabar menjawab pertanyaan saya.</p>
+            <div class="testimonial-card__author">
+              <span class="testimonial-card__avatar testimonial-card__avatar--initials" aria-hidden="true">AP</span>
+              <div>
+                <p class="testimonial-card__name">Arif Pratama</p>
+                <p class="testimonial-card__role">Pembeli Toyota Fortuner</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 dari 5 bintang">★★★★★</div>
+            <p class="testimonial-card__quote">Suka karena harga dan spesifikasi ditulis apa adanya. Simulasi kreditnya juga membantu sebelum ke bank.</p>
+            <div class="testimonial-card__author">
+              <span class="testimonial-card__avatar testimonial-card__avatar--initials" aria-hidden="true">SL</span>
+              <div>
+                <p class="testimonial-card__name">Sinta Lestari</p>
+                <p class="testimonial-card__role">Pembeli Honda CR-V</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 dari 5 bintang">★★★★★</div>
+            <p class="testimonial-card__quote">Beli mobil listrik pertama saya di sini. Dijelaskan cara charging dan garansinya sampai saya paham.</p>
+            <div class="testimonial-card__author">
+              <span class="testimonial-card__avatar testimonial-card__avatar--initials" aria-hidden="true">BH</span>
+              <div>
+                <p class="testimonial-card__name">Bagas Hartono</p>
+                <p class="testimonial-card__role">Pembeli Hyundai Ioniq 5</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container">
+        <span class="cta-band__eyebrow">Konsultasi gratis</span>
+        <h2 class="cta-band__title" id="cta-title">Belum yakin pilih unit yang mana?</h2>
+        <p class="cta-band__desc">Ceritakan kebutuhan dan anggaran Anda. Tim kami akan merekomendasikan unit yang paling masuk akal, tanpa paksaan.</p>
+        <div class="cta-band__actions">
+          <a href="https://wa.me/6281234567890?text=Halo%20Rakhawastu%20Motors%2C%20saya%20ingin%20konsultasi%20mobil." class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Chat via WhatsApp</a>
+          <a href="katalog.html" class="btn btn--secondary btn--lg">Lihat Katalog</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="kontak">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-footer__logo" aria-label="Rakhawastu Motors — Beranda">
+            <span class="site-header__logo-mark" aria-hidden="true">RM</span>
+            <span class="site-footer__logo-name">Rakhawastu Motors</span>
+          </a>
+          <p class="site-footer__tagline">Showroom mobil terpercaya dengan koleksi pilihan dari sembilan merek, dikurasi sejak 2010.</p>
+          <div class="site-footer__social">
+            <a href="https://instagram.com" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+            </a>
+            <a href="https://wa.me/6281234567890" class="site-footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </a>
+            <a href="mailto:halo@rakhawastumotors.id" class="site-footer__social-link" aria-label="Email Rakhawastu Motors">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <polyline points="22 6 12 13 2 6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Navigasi</h2>
+          <nav class="site-footer__links" aria-label="Navigasi footer">
+            <a href="index.html" class="site-footer__link">Beranda</a>
+            <a href="katalog.html" class="site-footer__link">Katalog mobil</a>
+            <a href="index.html#keunggulan" class="site-footer__link">Keunggulan</a>
+            <button type="button" class="site-footer__link site-footer__link--button js-open-favorites">Mobil favorit</button>
+          </nav>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Layanan</h2>
+          <div class="site-footer__links">
+            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20menjadwalkan%20test%20drive." class="site-footer__link" target="_blank" rel="noopener noreferrer">Jadwal test drive</a>
+            <a href="katalog.html?sort=harga-asc" class="site-footer__link">Mobil di bawah Rp 300 juta</a>
+            <a href="katalog.html?fuel=Listrik" class="site-footer__link">Mobil listrik</a>
+            <a href="index.html#kontak" class="site-footer__link">Hubungi showroom</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="site-footer__col-title">Kontak</h2>
+          <div class="site-footer__contact-items">
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Jl. Sudirman No. 88, Jakarta Selatan 12190</span>
+            </p>
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <a class="site-footer__link" href="tel:+622155558888">+62 21 5555 8888</a>
+            </p>
+            <p class="site-footer__contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Senin–Sabtu, 09.00–18.00 WIB</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© <span data-year>2026</span> Rakhawastu Motors. Hak cipta dilindungi.</p>
+        <div class="site-footer__bottom-links">
+          <span class="site-footer__bottom-link">Tugas Akhir BTNG · Kelas Frontend</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="fav-drawer"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
