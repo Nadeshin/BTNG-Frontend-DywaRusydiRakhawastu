@@ -63,12 +63,12 @@ export function attachImageFallback(img) {
 /*  Favorit (localStorage)                                                    */
 /* -------------------------------------------------------------------------- */
 
-const FAV_KEY = 'rakhawastu:favorites';
+const FAV_KEY = 'dytransport:favorites';
 let memoryFavorites = [];
 
 function storageAvailable() {
   try {
-    const probe = '__rakhawastu__';
+    const probe = '__dytransport__';
     window.localStorage.setItem(probe, probe);
     window.localStorage.removeItem(probe);
     return true;

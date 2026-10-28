@@ -1,6 +1,6 @@
-# Rakhawastu Motors — BTNG Frontend
+# DyTransport — BTNG Frontend
 
-Website showroom mobil untuk **Tugas Akhir BTNG Kelas Frontend**. Dibangun dengan HTML5, CSS3, dan JavaScript native (vanilla), tanpa framework atau build tool apa pun.
+Website showroom mobil **DyTransport** untuk **Tugas Akhir BTNG Kelas Frontend**. Dibangun dengan HTML5, CSS3, dan JavaScript native (vanilla), tanpa framework atau build tool apa pun.
 
 **Demo langsung:** <https://nadeshin.github.io/BTNG-Frontend-DywaRusydiRakhawastu/>
 

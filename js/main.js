@@ -63,7 +63,7 @@ function renderHero(cars) {
   if (!hero) return;
 
   heroImage.src = hero.foto || FALLBACK_IMAGE;
-  heroImage.alt = `${hero.nama} — unit unggulan Rakhawastu Motors`;
+  heroImage.alt = `${hero.nama} — unit unggulan DyTransport`;
   attachImageFallback(heroImage);
 
   heroName.textContent = hero.nama;

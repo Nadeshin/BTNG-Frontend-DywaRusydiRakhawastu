@@ -92,18 +92,18 @@ function renderDetail(car, cars) {
   statusMount.replaceChildren();
   content.hidden = false;
 
-  document.title = `${car.nama} — Rakhawastu Motors`;
+  document.title = `${car.nama} — DyTransport`;
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
     metaDescription.setAttribute(
       'content',
-      `${car.nama} tahun ${car.tahun}, ${car.transmisi}, ${car.bahanBakar}. Harga ${formatRupiah(car.harga)} di Rakhawastu Motors.`
+      `${car.nama} tahun ${car.tahun}, ${car.transmisi}, ${car.bahanBakar}. Harga ${formatRupiah(car.harga)} di DyTransport.`
     );
   }
 
   setText('detail-breadcrumb', car.namaSingkat || car.nama);
   setText('detail-title', car.nama);
-  setText('detail-subtitle', `Kode unit #${car.id} · Koleksi Rakhawastu Motors`);
+  setText('detail-subtitle', `Kode unit #${car.id} · Koleksi DyTransport`);
 
   const badge = document.getElementById('detail-badge');
   badge.textContent = car.statusLabel;
@@ -132,7 +132,7 @@ function renderDescription(car) {
   container.replaceChildren();
 
   const paragraphs = [
-    `${car.nama} adalah unit tahun ${car.tahun ?? '—'} dengan transmisi ${car.transmisi} dan bahan bakar ${car.bahanBakar}. Unit ini berada langsung di showroom Rakhawastu Motors dan dapat dilihat tanpa perantara.`,
+    `${car.nama} adalah unit tahun ${car.tahun ?? '—'} dengan transmisi ${car.transmisi} dan bahan bakar ${car.bahanBakar}. Unit ini berada langsung di showroom DyTransport dan dapat dilihat tanpa perantara.`,
     `Status unit saat ini ${car.statusLabel.toLowerCase()} dengan harga penawaran ${formatRupiah(car.harga)}. Harga tersebut belum termasuk biaya administrasi, asuransi, dan proses balik nama.`,
     'Setiap unit yang kami jual melewati pemeriksaan kondisi dan kelengkapan dokumen. Tim kami akan menunjukkan hasil pemeriksaan secara terbuka sebelum Anda memutuskan.',
   ];
@@ -183,8 +183,8 @@ function setupCta(car) {
   const sold = car.status === 'sold';
 
   const message = sold
-    ? `Halo Rakhawastu Motors, unit ${car.nama} sudah terjual. Saya ingin melihat unit serupa.`
-    : `Halo Rakhawastu Motors, saya ingin menjadwalkan test drive untuk ${car.nama} (kode #${car.id}).`;
+    ? `Halo DyTransport, unit ${car.nama} sudah terjual. Saya ingin melihat unit serupa.`
+    : `Halo DyTransport, saya ingin menjadwalkan test drive untuk ${car.nama} (kode #${car.id}).`;
 
   cta.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   cta.textContent = sold ? 'Tanya unit serupa' : 'Jadwalkan test drive';
